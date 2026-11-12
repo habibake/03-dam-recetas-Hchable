@@ -4,6 +4,7 @@ import 'package:recetas_app/services/recipe_service.dart';
 import 'package:recetas_app/widgets/receta_card.dart';
 import 'package:recetas_app/screens/detalle_receta_screen.dart';
 
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 

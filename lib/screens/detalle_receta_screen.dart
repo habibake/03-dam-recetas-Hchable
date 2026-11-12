@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recetas_app/models/receta.dart';
+import 'package:recetas_app/screens/agregar_resena_screen.dart'; 
 
 class DetalleRecetaScreen extends StatefulWidget {
   final Receta receta;
@@ -88,6 +89,25 @@ class _DetalleRecetaScreenState extends State<DetalleRecetaScreen> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+  backgroundColor: Colors.deepOrange,
+  icon: const Icon(Icons.rate_review, color: Colors.white),
+  label: const Text('Reseña', style: TextStyle(color: Colors.white)),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AgregarResenaScreen(
+          recetaId: receta.id,
+          recetaNombre: receta.nombre,
+        ),
+      ),
     );
+  },
+),
+      
+    );
+ 
+ 
   }
 }
